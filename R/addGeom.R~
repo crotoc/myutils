@@ -1,0 +1,19 @@
+#' addGeom
+#'
+#' add geom on the existing plot
+#'
+#' @param no param need.
+#' 
+#' @return None
+#'
+#' @author Rui Chen (crotoc@gmail.com)
+#'
+#' @examples
+#' addGeom(type,opt)
+#'
+#' 
+#' @export
+#' 
+#'
+#' 
+#'
