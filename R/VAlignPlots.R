@@ -6,7 +6,8 @@
 #' @param keepLegends Whether to keep legends
 #' @param margin.unit The margins of the plot
 #' @param last whehter add margin
-#' 
+#' @import ggplot2
+#' @import grid
 #' @return a grob list
 #'
 #' @author Rui Chen (crotoc@gmail.com)

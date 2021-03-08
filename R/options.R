@@ -10,10 +10,8 @@
 #'
 #' @examples
 #' option <- myoption()
-#'
-#' @import
+#' @import 
 #' optparse
-#' 
 #' @export
 #' 
 #'

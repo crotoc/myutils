@@ -14,7 +14,8 @@
 #'
 #' @examples
 #' out <- plotPLabelFormat(pvalue)
-#'
+#' @import
+#' data.table
 #' @export
 #' 
 #' 

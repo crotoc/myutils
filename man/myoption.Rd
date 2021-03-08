@@ -17,7 +17,6 @@ All options I have used.
 }
 \examples{
 option <- myoption()
-
 }
 \author{
 Rui Chen (crotoc@gmail.com)

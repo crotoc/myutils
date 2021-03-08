@@ -21,7 +21,6 @@ Create beautiful multiple pages plot from ggplot object.
 }
 \examples{
 out <- plotPLabelFormat(pvalue)
-
 }
 \author{
 Rui Chen (crotoc@gmail.com)

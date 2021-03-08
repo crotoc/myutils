@@ -6,6 +6,8 @@
 #' 
 #' @return None
 #'
+#' @import BiocManager
+#' 
 #' @author Rui Chen (crotoc@gmail.com)
 #' @examples
 #' using("ggplot2")
@@ -19,8 +21,8 @@ using<-function(...) {
     req<-unlist(lapply(libs,require,character.only=TRUE))
     need<-libs[req==FALSE]
 
-    mypkg <- need[grepl("myutils|ggfaceth|Gibbs",need,perl=TRUE)]
-    need <- need[!grepl("myutils|ggfaceth|Gibbs",need,perl=TRUE)]
+    mypkg <- need[grepl("myutils|iRIGS",need,perl=TRUE)]
+    need <- need[!grepl("myutils|iRIGS",need,perl=TRUE)]
     n<-length(need)
     if(n>0){
         libsmsg<-if(n>2) paste(paste(need[1:(n-1)],collapse=", "),",",sep="") else need[1]
@@ -29,7 +31,6 @@ using<-function(...) {
             libsmsg<-paste(libsmsg," and ", need[n],sep="")
         }
         print(paste("The following packages could not be found: ",libsmsg,"\n\r\n\rInstall missing packages?",collapse=""))
-        require(BiocManager)
         BiocManager::install(need)
         lapply(need,require,character.only=TRUE)
     }
@@ -42,7 +43,7 @@ using<-function(...) {
             libsmsg<-paste(libsmsg," and ", mypkg[n],sep="")
         }
         libsmsg<-paste("The following packages could not be found: ",libsmsg,"\n\r\n\rInstall missing packages?",collapse="")
-        mypkg <- paste("crotoc/myscript/Rscripts/mypkg/",mypkg,"/",sep = "")
+        mypkg <- paste("crotoc/",mypkg,sep = "")
         print(mypkg)
         lapply(mypkg,FUN=function(x){install_github(x)})
     }

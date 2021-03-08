@@ -16,7 +16,10 @@
 #' 
 #' @return a grob list
 #'
-#'
+#' @import
+#' ggforce
+#' ggplot2
+#' 
 #' @author Rui Chen (crotoc@gmail.com)
 #' @keywords plot
 #'
