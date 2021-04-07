@@ -66,6 +66,18 @@ myoption <- function(){
         make_option(c("--digits"), action="store",
                     default=3,
                     type="integer",
+                    help=" [default: %default]"),
+        make_option(c("--rmd"), action="store",
+                    default="1",
+                    type="character",
+                    help=" [default: %default]"),
+        make_option(c("--rds"), action="store",
+                    default="1",
+                    type="character",
+                    help=" [default: %default]"),
+        make_option(c("--threshold"), action="store",
+                    default=0,
+                    type="numeric",
                     help=" [default: %default]")
     )
 
@@ -507,10 +519,6 @@ myoption <- function(){
     )
 
     option$heatmap <- list(
-        make_option(c("--threshold"), action="store",
-                    default=0,
-                    type="numeric",
-                    help=" [default: %default]"),
         make_option(c("--row_cluster"), action="store",
                     default="cor",
                     type="character",
