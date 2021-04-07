@@ -105,6 +105,11 @@ myoption <- function(){
     )
 
     option$plot <- list(
+        make_option(c("--objectname"), action="store",
+                    default="mca",
+                    type="character",
+                    help=" [default: %default]"),
+
         make_option(c("--returnObject"), action="store",
                     default=FALSE,
                     type="logical",
