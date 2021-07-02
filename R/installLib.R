@@ -16,8 +16,7 @@
 #' installLib(type=c("general","plot"))
 #'
 #' @export
-#' @import
-#' devtools
+#' @importFrom devtools install_github
 #' @importFrom BiocManager install
 #' 
 #'

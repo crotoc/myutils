@@ -6,8 +6,8 @@
 #' 
 #' @return None
 #'
-#' @import BiocManager
-#' 
+#' @importFrom BiocManager install
+#' @importFrom devtools install_github
 #' @author Rui Chen (crotoc@gmail.com)
 #' @examples
 #' using("ggplot2")
@@ -45,7 +45,7 @@ using<-function(...) {
         libsmsg<-paste("The following packages could not be found: ",libsmsg,"\n\r\n\rInstall missing packages?",collapse="")
         mypkg <- paste("crotoc/",mypkg,sep = "")
         print(mypkg)
-        lapply(mypkg,FUN=function(x){install_github(x)})
+        lapply(mypkg,FUN=function(x){devtools::install_github(x)})
     }
     
 }
