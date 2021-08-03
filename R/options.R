@@ -94,6 +94,41 @@ myoption <- function(){
         make_option(c("--threshold"), action="store",
                     default=0,
                     type="numeric",
+                    help=" [default: %default]"),
+        make_option(c("--asRmdPart"), action="store",
+                    default=TRUE,
+                    type="logical",
+                    help=" [default: %default]"),
+        make_option(c("--condaEnv"), action="store",
+                    default="/fs0/chenr6/chenr6/opt/condaEnv/AccreLibEnv",
+                    type="character",
+                    help=" [default: %default]"),
+        make_option(c("--eval"), action="store",
+                    default=FALSE,
+                    type="logical",
+                    help=" [default: %default]"),
+        make_option(c("--clean"), action="store",
+                    default=TRUE,
+                    type="logical",
+                    help=" [default: %default]"),
+        make_option(c("--insertFig"), action="store",
+                    default=TRUE,
+                    type="logical",
+                    help=" [default: %default]")
+    )
+
+    option$singlecell <- list(
+        make_option(c("--nFeature_RNA"), action="store",
+                    default=500,
+                    type="double",
+                    help=" [default: %default]"),
+        make_option(c("--nCount_RNA"), action="store",
+                    default=500,
+                    type="double",
+                    help=" [default: %default]"),
+        make_option(c("--percent.mt"), action="store",
+                    default=5,
+                    type="double",
                     help=" [default: %default]")
     )
 
