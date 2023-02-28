@@ -46,9 +46,9 @@ prettyPaginate = function (myplot,opt){
         for(i in seq_len(total_pages)){
             cat("Total pages: boxploth ",i,"\n")
             if(opt$rowfacet){
-                query.plot <- myplot   + facet_wrap_paginate(as.formula(paste(opt$facet_cname,"~.","  ")),ncol=opt$ncol,nrow=opt$nrow,scale=opt$scale,drop=opt$drop, page=i,strip.position = opt$strip.position)
+                query.plot <- myplot   + facet_wrap_paginate(as.formula(paste(opt$facet_cname,"~.","  ")),ncol=opt$ncol,nrow=opt$nrow,scale=opt$scale,drop=opt$drop, page=i,strip.position = opt$strip_position)
             }else{
-                query.plot <- myplot   + facet_wrap_paginate(as.formula(paste(".~",opt$facet_cname,"  ")),ncol=opt$ncol,nrow=opt$nrow,scale=opt$scale,drop=opt$drop,page=i, strip.position = opt$strip.position)
+                query.plot <- myplot   + facet_wrap_paginate(as.formula(paste(".~",opt$facet_cname,"  ")),ncol=opt$ncol,nrow=opt$nrow,scale=opt$scale,drop=opt$drop,page=i, strip.position = opt$strip_position)
             }
             if(opt$ggobject){
                 out[[i]] <- query.plot
