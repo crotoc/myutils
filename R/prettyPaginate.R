@@ -41,7 +41,7 @@ prettyPaginate = function (myplot,opt){
             tmp.plot <- myplot   + facet_wrap_paginate(as.formula(paste(".~",opt$facet_cname,"  ")),ncol=opt$ncol,nrow=opt$nrow,scale=opt$scale,drop=opt$drop,page=1)
         }
         total_pages <- n_pages(tmp.plot)
-    
+        
         cat("total pages:",total_pages,"\n")
         for(i in seq_len(total_pages)){
             cat("Total pages: boxploth ",i,"\n")
@@ -82,9 +82,9 @@ prettyPaginate = function (myplot,opt){
     ## cat("Row in last page: ",lastpage_nrow,"\n")
     ## cat(length(out),"\n")
     ## stripidx <- out[[length(out)]]$layout$t[grep("strip",out[[length(out)]]$layout$name)[1]]
-    
+
     ## stripsize <- out[[length(out)]]$height[stripidx]
-    
+
     ## panelspacesize <- out[[length(out)]]$height[1]
 
     ## cat(lastpage_nrow,stripidx,stripsize,panelspacesize,"\n")
