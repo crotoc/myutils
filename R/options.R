@@ -547,14 +547,14 @@ myoption <- function(){
         make_option(c("--col_bait_gene"), action="store",
                     default=8,
                     type="integer",
-                    help=" [default: %default]"),
-        make_option(c("--col_enh_chr"), action="store",
-                    default=1,
-                    type="integer",
-                    help="Chromosome [default: %default]")
+                    help=" [default: %default]")
     )
 
     option$enhancer <- list(
+        make_option(c("--col_enh_chr"), action="store",
+                    default=1,
+                    type="integer",
+                    help="Chromosome [default: %default]"),
         make_option(c("--col_enh_start"), action="store",
                     default=2,
                     type="integer",

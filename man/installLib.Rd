@@ -20,13 +20,6 @@ installLib(type=c("all"))
 installLib(type=c("general","plot"))
 
 }
-\references{
-
-}
-\seealso{
-
-}
 \author{
 Rui Chen (crotoc@gmail.com)
 }
-\keyword{}
