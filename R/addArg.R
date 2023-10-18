@@ -74,7 +74,7 @@ addArgGeneral <- function(parser){
     parser$add_argument("--save_RData", action="store_true", default=FALSE,help="--save_RData  default is [default %(defaults)s]")
 
 
-    parser$add_argument("--verbose", action="store_false", default=FALSE,help="--verbose  default is [default %(defaults)s]")
+    parser$add_argument("--verbose", action="store_true", default=FALSE,help="--verbose  default is [default %(defaults)s]")
 
     parser$add_argument("--progress_bar", action="store_true", default=FALSE,help="--progress_bar  default is [default %(defaults)s]")
 
@@ -95,7 +95,7 @@ addArgGeneral <- function(parser){
     parser$add_argument("--yaml", default="1",dest="yaml",help = "yaml is [default \"%(default)s\"]")
     parser$add_argument("--test", action="store_true", default=FALSE,help="--test  default is [default %(defaults)s]")
     parser$add_argument("--ext", default="pdf",dest = "ext", help="--ext Output file [default: %default]")
-    parser$add_argument("--readr", action="store_false", default=FALSE,help="--readr  default is [default %(defaults)s]")
+    parser$add_argument("--readr", action="store_true", default=FALSE,help="--readr  default is [default %(defaults)s]")
     return(parser)
 }
 
@@ -214,6 +214,8 @@ addArgPlot <- function(parser){
     parser$add_argument("--ylim", default="NULL",dest="ylim",help = "ylim is [default \"%(default)s\"]")
     parser$add_argument("--xlim", default="NULL",dest="xlim",help = "xlim is [default \"%(default)s\"]")
     parser$add_argument("--alpha", default=0.5, type="double", dest="alpha", help="alpha is  [default %(default)s]")
+    parser$add_argument("--width", type="integer", default=5, help="width [default %(default)s]")
+    parser$add_argument("--height", type="integer", default=5, help="heidht [default %(default)s]")
     return(parser)
 }
 
