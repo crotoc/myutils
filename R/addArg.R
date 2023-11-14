@@ -179,7 +179,7 @@ addArgPlot <- function(parser){
     parser$add_argument("--fontsize", type="integer", default=2, help="--fontsize  [default: %default]")
     parser$add_argument("--fontfamily", default="Times",dest = "fontfamily", help="--fontfamily  [default: %default]")
     parser$add_argument("--pointshape", type="integer", default=21, help="--pointshape  [default: %default]")
-    parser$add_argument("--pointsize", type="integer", default=2, help="--pointsize  [default: %default]")
+    parser$add_argument("--pointsize", type="double", default=2, help="--pointsize  [default: %default]")
     parser$add_argument("--lollipop", action="store_true", default=FALSE, help="--lollipop  [default: %default]")
     parser$add_argument("--wrap", action="store_false", default=TRUE, help="--wrap TRUE is facet_wrap and FALSE is facet_grid [default: %default]")
     parser$add_argument("--ignore_col", default="NULL",dest = "ignore_col", help="--ignore_col  [default: %default]")

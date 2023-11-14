@@ -59,6 +59,7 @@ prettyPaginate = function (myplot,opt){
         }
     }else if(opt$facet_grid!=0){
         ## calculate how many pages in total
+        cat("nrow: ",opt$nrow," ncol: ",opt$ncol,"\n")
         tmp.plot <- myplot   + facet_grid_paginate(as.formula(opt$facet_grid),ncol=opt$ncol,nrow=opt$nrow,scale=opt$scale,space=opt$space,drop=opt$drop, page=1)
         total_pages <- n_pages(tmp.plot)
         ## iterate every page
