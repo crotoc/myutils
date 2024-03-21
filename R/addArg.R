@@ -66,7 +66,7 @@ addArgGeneral <- function(parser){
 
     parser$add_argument("--header", action="store_true", default=FALSE,help="--header  default is [default %(defaults)s]")
 
-    parser$add_argument("-n", "--number", type="integer", default=1, help="number [default %(default)s]")
+    parser$add_argument("-n", "--number", type="double", default=1, help="number [default %(default)s]")
 
     parser$add_argument("--example", action="store_true", default=FALSE,help="--example  default is [default %(defaults)s]")
 
@@ -176,7 +176,7 @@ addArgPlot <- function(parser){
     parser$add_argument("--observation", default="NULL",dest = "observation", help="--observation  [default: %default]")
     parser$add_argument("--observation_x", type="integer", default=1, help="observation_x [default %(default)s]")
     parser$add_argument("--observation_value", type="integer", default=2, help="observation_value [default %(default)s]")
-    parser$add_argument("--fontsize", type="integer", default=2, help="--fontsize  [default: %default]")
+    parser$add_argument("--fontsize", type="double", default=2, help="--fontsize  [default: %default]")
     parser$add_argument("--fontfamily", default="Times",dest = "fontfamily", help="--fontfamily  [default: %default]")
     parser$add_argument("--pointshape", type="integer", default=21, help="--pointshape  [default: %default]")
     parser$add_argument("--pointsize", type="double", default=2, help="--pointsize  [default: %default]")
@@ -214,8 +214,8 @@ addArgPlot <- function(parser){
     parser$add_argument("--ylim", default="NULL",dest="ylim",help = "ylim is [default \"%(default)s\"]")
     parser$add_argument("--xlim", default="NULL",dest="xlim",help = "xlim is [default \"%(default)s\"]")
     parser$add_argument("--alpha", default=0.5, type="double", dest="alpha", help="alpha is  [default %(default)s]")
-    parser$add_argument("--width", type="integer", default=5, help="width [default %(default)s]")
-    parser$add_argument("--height", type="integer", default=5, help="heidht [default %(default)s]")
+    parser$add_argument("--width", type="double", default=5, help="width [default %(default)s]")
+    parser$add_argument("--height", type="double", default=5, help="heidht [default %(default)s]")
     return(parser)
 }
 
@@ -499,12 +499,12 @@ addArgHeatmap <- function(parser){
     parser$add_argument("--colmeta_sort_by", type="integer", default=0, help="--colmeta_sort_by  [default: %default]")
     parser$add_argument("--colmeta_ycol", type="integer", default=1, help="--colmeta_ycol  [default: %default]")
     parser$add_argument("--colmeta_grp", type="integer", default=2, help="--colmeta_grp  [default: %default]")
-    parser$add_argument("--row_dd_width", type="integer", default=10, help="--row_dd_width  [default: %default]")
-    parser$add_argument("--row_key_width", type="integer", default=1, help="--row_key_width  [default: %default]")
-    parser$add_argument("--heatmap_width", type="integer", default=20, help="--heatmap_width  [default: %default]")
-    parser$add_argument("--col_dd_height", type="integer", default=10, help="--col_dd_height  [default: %default]")
-    parser$add_argument("--col_key_height", type="integer", default=1, help="--col_key_height  [default: %default]")
-    parser$add_argument("--heatmap_height", type="integer", default=20, help="--heatmap_height  [default: %default]")
+    parser$add_argument("--row_dd_width", type="double", default=10, help="--row_dd_width  [default: %default]")
+    parser$add_argument("--row_key_width", type="double", default=1, help="--row_key_width  [default: %default]")
+    parser$add_argument("--heatmap_width", type="double", default=20, help="--heatmap_width  [default: %default]")
+    parser$add_argument("--col_dd_height", type="double", default=10, help="--col_dd_height  [default: %default]")
+    parser$add_argument("--col_key_height", type="double", default=1, help="--col_key_height  [default: %default]")
+    parser$add_argument("--heatmap_height", type="double", default=20, help="--heatmap_height  [default: %default]")
     parser$add_argument("--clusterplot", action="store_true", default=FALSE, help="--clusterplot  [default: %default]")
     parser$add_argument("--gmtfile", default="/fs0/chenr6/Database_fs0/GO/is_a.partof.regulates/fmt/go.biological_process",dest = "gmtfile", help="--gmtfile  [default: %default]")
 
