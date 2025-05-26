@@ -240,9 +240,9 @@ addArgPlot <- function(parser){
 addArgRmd <- function(parser){
     parser$add_argument("--rmd", default="1",dest="rmd",help = "rmd is [default \"%(default)s\"]")
 
-    parser$add_argument("--asRmdPart", action="store_false",dest="asRmdPart", default=TRUE,help="asRmdPart is [default %(default)s]")
+    parser$add_argument("--asRmdPart", action="store_true",dest="asRmdPart", default=FALSE,help="asRmdPart is [default %(default)s]")
 
-    parser$add_argument("--clean", action="store_false",dest="clean", default=TRUE,help="clean is [default %(default)s]")
+    parser$add_argument("--clean", action="store_true",dest="clean", default=FALSE,help="clean is [default %(default)s]")
     return(parser)
 }
 
